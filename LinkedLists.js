@@ -201,6 +201,42 @@ class LinkedList {
 
 		return curNode.value;
 	}
+
+	keysToArray() {
+		let curNode = this.head; // Start point
+		let arr = [];
+
+		while (curNode !== null) {
+			arr.push(curNode.value.key);
+			curNode = curNode.next;
+		}
+
+		return arr;
+	}
+
+	valuesToArray() {
+		let curNode = this.head; // Start point
+		let arr = [];
+
+		while (curNode !== null) {
+			arr.push(curNode.value.value);
+			curNode = curNode.next;
+		}
+
+		return arr;
+	}
+
+	elemsToArray() {
+		let curNode = this.head; // Start point
+		let arr = [];
+
+		while (curNode !== null) {
+			arr.push([curNode.value.key, curNode.value.value]);
+			curNode = curNode.next;
+		}
+
+		return arr;
+	}
 }
 
 export { LinkedList };
